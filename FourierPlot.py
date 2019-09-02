@@ -58,7 +58,7 @@ class FourierPlot():
         anim = animation.FuncAnimation(
             fig, FourierPlot.animate,
             fargs=(self,), init_func=FourierPlot.init,
-            frames=self.frames, interval=40,
+            frames=self.frames, interval=self.interval,
             blit=True, repeat=True
         )
         if filename:
