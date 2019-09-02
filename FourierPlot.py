@@ -1,6 +1,5 @@
 import numpy as np
 from matplotlib import pyplot as plt
-from matplotlib.patches import Circle
 from matplotlib import animation
 
 class FourierPlot():
@@ -47,8 +46,8 @@ class FourierPlot():
         xcenter, ycenter = center.real, center.imag
         return ((xcenter-diff, xcenter+diff), (ycenter-diff, ycenter+diff))
 
-    def plot(self, filename=None):
-        fig = plt.figure(figsize=(20, 10))
+    def plot(self, size=(8, 8), filename=None):
+        fig = plt.figure(figsize=size)
         xlim, ylim = self.get_lim()
         ax = plt.axes(xlim=xlim, ylim=ylim)
         ax.set_aspect("equal")
@@ -58,7 +57,7 @@ class FourierPlot():
         anim = animation.FuncAnimation(
             fig, FourierPlot.animate,
             fargs=(self,), init_func=FourierPlot.init,
-            frames=self.frames, interval=40,
+            frames=self.frames, interval=self.interval,
             blit=True, repeat=True
         )
         if filename:
