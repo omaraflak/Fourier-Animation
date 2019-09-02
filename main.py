@@ -3,9 +3,9 @@ from Fourier import Fourier
 from FourierPlot import FourierPlot
 
 print("read svg...")
-data = SVGReader("pi.svg").data()
+data = SVGReader("twitter.svg").data()
 print("compute fourier coef...")
-coef = Fourier(data, N=40).sample()
+coef = Fourier(data, N=100).sample()
 print("plot...")
-plot = FourierPlot(coef, frames=200, interval=10)
+plot = FourierPlot(coef, frames=300, interval=20)
 plot.plot()
