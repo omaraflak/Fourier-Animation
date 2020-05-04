@@ -8,12 +8,10 @@ class Fourier():
     def integrate(self, f, a, b):
         s = 0
         dt = 0.001
-        for t in np.arange(a, b, dt):
-            s += f(t)*dt
-        return s
+        return sum(f(t)*dt for t in np.arange(a, b, dt))
 
     def nth_coef(self, data, n):
-        f = lambda t : data.get(t)*np.exp(-2*np.pi*n*t*1j)
+        f = lambda t : data.get(t) * np.exp(-2 * np.pi * n * t * 1j)
         return self.integrate(f, 0, 1)
 
     def sample(self):

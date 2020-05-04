@@ -1,9 +1,9 @@
-from SVGReader import SVGReader
-from Fourier import Fourier
-from FourierPlot import FourierPlot
+from src import SVGReader
+from src import Fourier
+from src import FourierPlot
 
 print("read svg...")
-data = SVGReader("twitter.svg").data()
+data = SVGReader("svg/twitter.svg").data()
 print("compute fourier coef...")
 coef = Fourier(data, N=100).sample()
 print("plot...")
