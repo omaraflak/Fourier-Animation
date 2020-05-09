@@ -19,7 +19,3 @@ coef = Fourier(data, N=40).sample()
 plot = FourierPlot(coef, frames=200, interval=40)
 plot.plot()
 ```
-
-# Credit
-
-Icon made by [Stephen Hutchings](https://www.flaticon.com/authors/stephen-hutchings)
