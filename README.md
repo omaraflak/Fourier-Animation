@@ -5,7 +5,7 @@ Simple Python project to draw any continuous shape using Fourier series.
 # Install requirements & Start
 
 ```
-pip install -r requirements.txt
+pip install numpy matplotlib svgpathtools
 python3 main.py
 ```
 
@@ -16,7 +16,7 @@ from SVGReader import SVGReader
 from Fourier import Fourier
 from FourierPlot import FourierPlot
 
-data = SVGReader("pi.svg").data()
+data = SVGReader("pi.svg")
 coef = Fourier(data, N=40).sample()
 plot = FourierPlot(coef, frames=200, interval=40)
 plot.plot()
