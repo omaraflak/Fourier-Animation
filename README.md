@@ -12,9 +12,7 @@ python3 main.py
 # Sample Code
 
 ```python
-from src import SVGReader
-from src import Fourier
-from src import FourierPlot
+from src import SVGReader, Fourier, FourierPlot
 
 data = SVGReader("pi.svg")
 coef = Fourier(data, N=40).sample()
