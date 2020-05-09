@@ -1,6 +1,4 @@
-from src import SVGReader
-from src import Fourier
-from src import FourierPlot
+from src import SVGReader, Fourier, FourierPlot
 
 print("read svg...")
 data = SVGReader("svg/twitter.svg")
