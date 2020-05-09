@@ -5,7 +5,7 @@ Simple Python project to draw any continuous shape using Fourier series.
 # Install requirements & Start
 
 ```
-pip install numpy matplotlib svgpathtools
+pip3 install numpy matplotlib svgpathtools
 python3 main.py
 ```
 
